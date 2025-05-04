@@ -42,7 +42,7 @@ function App() {
     if (import.meta.env.DEV) {
       wsUrl = import.meta.env.VITE_WS_URL ?? "ws://localhost:9999/ws"
     } else {
-      wsUrl = `ws://${window.location.host}/ws`
+      wsUrl = `wss://${window.location.host}/ws`
     }
 
     ws.current = new WebSocket(wsUrl)
